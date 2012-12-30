@@ -1,0 +1,103 @@
+#main{
+	margin: 0 auto;
+	width: 1000px;
+}
+#menu ul{
+	z-index: 501;
+}
+#admin_filter{
+	clear: both;
+}
+#admin_filter ul{
+	list-style-type:none; 
+}
+#admin_grid{
+	clear: both;
+}
+#modal_frame{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	display: none;
+	background-image: url(modal.gif);
+	opacity:0.4;
+	filter:alpha(opacity=40);
+}
+#modal_frame.show{
+	display: block;	
+}
+#form_frame{
+	z-index: 1001;
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+#form_frame.show{
+	display: block;
+}
+#form_container{
+	position: relative;
+	margin: 10% auto;
+	background-color: #dedede;
+	width: 600px;
+	border: 1px solid black;
+}
+.popup_frame{
+	z-index: 1001;
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;	
+			}
+.popup_message{
+	clear: both;
+	width: 100%;
+	text-align: left;
+}
+.popup_button {
+	margin-top: 3px;
+	padding: 1px;
+	border: 1px solid black;
+	cursor: pointer;
+}
+.popup_button:hover, 
+.popup_button:focus {
+	background-color: #DFD;
+}
+#confirm_delete_container{
+	position: relative;
+	margin: 10% auto;
+	background-color: #dedede;
+	width: 200px;
+ 	height: 56px; 
+	text-align: right;
+	border: 1px solid black;
+}
+#confirm_delete_container .popup_message{
+	padding: 5px;
+}
+#confirm_delete_container .popup_button {
+	margin: 5px 5px 5px 0;
+}
+.hidden{
+	display: none;
+}
+.show{
+	display: block;
+}
+.filterButton{
+	cursor: pointer;
+	margin: 5px;
+	color: black;
+}
+.filterButton:hover{
+	color: coral;
+}

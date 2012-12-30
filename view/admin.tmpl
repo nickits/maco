@@ -1,0 +1,72 @@
+<% c++ #include "../data/admin.h" %>
+<% skin skinback %>
+<% view admin uses back::admin %>
+<% template render() %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" media="screen" href="/css/mootools/plugins/omnigrid/omnigrid.css" type="text/css" />
+    <link rel="stylesheet" media="screen" href="/css/mootools/plugins/MooDropMenu.css" type="text/css" />
+    <link rel="stylesheet" href="/css/admin/admin.css" type="text/css" />
+	<link rel="stylesheet" href="/css/admin/form.css" type="text/css" />
+
+    <script type='text/javascript' src='/js/mootools/mootools-core.js'></script>
+    <script type='text/javascript' src='/js/mootools/mootools-more.js'></script>
+    <script type="text/javascript" src="/js/mootools/plugins/omnigrid.js"></script>
+    <script type="text/javascript" src="/js/mootools/plugins/MooDropMenu.js"></script>
+    <script type='text/javascript' src='/js/admin/admin.js'></script>
+	<script type="text/javascript" src="/js/admin/forms.js"></script>
+	<script type="text/javascript">
+		var entity = "<%= entity %>";
+	</script>
+
+    <title>Admin</title>
+</head>
+<body>
+<div id="main">
+	<div id="menu">
+		<ul id="nav"> 
+			<li><a href="/products">Home</a>
+				<ul>
+					<li><a href="/products">Products</a></li>
+					<li><a href="/categories">Categories</a></li>
+					<li><a href="/collections">Collections</a></li>
+				</ul>
+			</li> 
+			<li> 
+				<a href="#">Blog</a> 
+				<ul> 
+					<li><a href="#">Archive</a></li> 
+					<li> 
+						<a href="#">Categories</a> 
+						<ul> 
+							<li><a href="#">Javascript</a></li> 
+							<li><a href="#">Mootools</a></li> 
+							<li><a href="#">PHP</a></li> 
+						</ul> 
+					</li> 
+					<li><a href="#">Last comment</a></li> 
+				</ul> 
+			</li> 
+			<li><a href="#">Contact</a></li> 
+		</ul>
+	</div>
+	<div id="admin_filter"></div>
+	<div id="admin_grid" ></div>
+</div>
+<div id="modal_frame"></div>
+<div id="form_frame">
+<div id="form_container"></div>
+</div>
+<div id="confirm_delete" class="popup_frame">
+	<div id="confirm_delete_container">
+		<div class="popup_message">Delete, really?</div>
+		<span id="delete_ok" class="popup_button">OK</span>
+		<span id="delete_cancel" class="popup_button">Cancel</span>
+	</div>
+</div>
+</body>
+</html>
+<% end template %>
+<% end view %>
+<% end skin %>

@@ -1,0 +1,93 @@
+<% c++ #include "content1.h" %>
+<% skin skinfront1 %>
+<% view content1 uses front1::content1 %>
+<% template render() %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="/css/nature/pom.css"  />
+<link rel="stylesheet" type="text/css" href="/css/main.css"  />
+<script type='text/javascript' src='/js/mootools/mootools-core.js'></script>
+<script type='text/javascript' src='/js/mootools/mootools-more.js'></script>
+<script type='text/javascript' src='/js/mootools/plugins/tree-acordion.js'></script>
+<script type='text/javascript' src='/js/mootools/plugins/Moo3DCarousel.js'></script>
+<script type='text/javascript' src='/js/main.js'></script>
+
+<script type='text/javascript'>
+  var sellectionType = "<%= sellectionType %>";
+</script>
+<title>Pomme</title>
+
+</head>
+
+<body><div id="wrap">
+
+<div id="header"><br />
+
+<h3>www.your site.com</h3>
+<p><strong>"your slogan can be here tm "</strong><br />
+  (or anything else )</p>
+</div>
+<img  src="/css/nature/images/header.jpg" width="1000" height="128" alt="" />
+<div id="avmenu">
+<h2 class="hide">Menu:</h2>
+<ul id='root'>
+    <li>
+        <a href='javascript:;' class='acord-handle'>COLLECTIONS</a>
+        <ul class='branch' id='collections'>
+	      <%= collections | raw %>
+        </ul>
+    </li>
+    <li>
+        <a href='javascript:;' class='acord-handle'>CATEGORIES</a>
+        <ul class='branch' id='categories'>
+<!--            <li><a href='javascript:;' class='acord-handle'>Category1</a>
+            </li>
+-->
+	      <%= categories | raw %>
+        </ul>
+    </li>
+</ul>
+
+<div class="announce">
+<h3>Whats new  ?</h3>
+<p><strong>4 Janvier , 2007:</strong><br />
+elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim </p>
+<p class="textright"><a href="index.html">More Info...</a></p>
+</div>
+
+</div>
+
+<div id="extras">
+<h3>&nbsp;<br />
+  More Info:</h3>
+<p> consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</p>
+
+<h3>Links:</h3>
+<p><img src="/css/nature/images/arrow.gif" alt="arrow" width="7" height="7" /> <a href="#">Link 1</a><br />
+  <img src="/css/nature/images/arrow.gif" alt="arrow" width="7" height="7" />  <a href="#">Link 2</a><br />
+  <img src="/css/nature/images/arrow.gif" alt="arrow" width="7" height="7" />  <a href="#">Link 3</a><br />
+</p>
+
+<p class="small">Dezign<br />(4 Janv, 2007)<br />
+<a href="http://validator.w3.org/check/referer">Validate XHTML 1.0 Strict</a><br /> and Css </p>
+</div>
+
+<div id="content">
+
+<div><%= collectionImages | raw %></div>
+<div><%= productImage | raw %></div>
+
+</div>
+
+<div id="footer">
+Copyright &copy; 2007 (your name). Design by kty <a href="http://www.studio-plume.org">studio-plume.org</a> for <a href="http://www.oswd.org/">OSWD</a>.</div>
+
+</div>
+</body>
+</html>
+<% end template %>
+<% end view %>
+<% end skin %>

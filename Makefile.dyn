@@ -1,0 +1,15 @@
+LIBS=-lcppcms -lbooster -lwtdbosqlite3
+
+all: clean dresses libcontents.so
+
+contents.cpp: first.tmpl
+	cppcms_tmpl_cc first.tmpl -o contents.cpp
+
+libcontents.so: content.h contents.cpp
+	g++ -shared -fPIC contents.cpp -o libcontents.so ${LIBS}
+
+dresses: dresses.cpp 
+	g++ -Wall -rdynamic dresses.cpp -o dresses ${LIBS}
+
+clean:
+	rm -f *.fcgi *.exe contents.cpp *.so dresses
